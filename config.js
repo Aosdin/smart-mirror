@@ -3,7 +3,7 @@ var config = {
     // Lenguage for the mirror
     language : "en", //must also manually update locales/X.js bower component in index.html
     layout: "main",
-    greeting : ["Hi, sexy!", "Greetings, commander"], // An array of greetings to randomly choose from
+    greeting : ["Hi", "Greetings, commander"], // An array of greetings to randomly choose from
 
     // Alternativly you can have greetings that appear based on the time of day
     /*
