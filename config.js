@@ -1,7 +1,7 @@
 var config = {
 
     // Lenguage for the mirror
-    language : "en", //must also manually update locales/X.js bower component in index.html
+    language : "ko", //must also manually update locales/X.js bower component in index.html
     layout: "main",
     greeting : ["Hi", "Greetings, commander"], // An array of greetings to randomly choose from
 
@@ -45,6 +45,14 @@ var config = {
     giphy: {
       key : "" // Your Gliphy API key
     },
+    overrides : {
+    AUDIO_SOURCE: 'hw:1,0', // this is your microphone input. If you don't know it you can refer to this thread (http://www.voxforge.org/home/docs/faq/faq/linux-how-to-determine-your-audio-cards-or-usb-mics-maximum-sampling-rate)
+    DETECTION_PERCENTAGE_START : '5%', // minimum noise percentage threshold necessary to start recording sound
+    DETECTION_PERCENTAGE_END: '5%',  // minimum noise percentage threshold necessary to stop recording sound
+    CLAP_AMPLITUDE_THRESHOLD: 0.7, // minimum amplitude threshold to be considered as clap
+    CLAP_ENERGY_THRESHOLD: 0.3,  // maximum energy threshold to be considered as clap
+    MAX_HISTORY_LENGTH: 10 // all claps are stored in history, this is its max length
+	},
     traffic: {
       key : "", // Bing Maps API Key
       reload_interval : 5, // Number of minutes the information is refreshed
